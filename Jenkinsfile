@@ -15,7 +15,8 @@ pipeline {
           }
         }
         steps{
-          echo "Deploying release ${RELEASE} to environment ${TARGET_ENVIRONMENT}"
+          echo "Deploying release ${RELEASE} to environment ${TARGET_ENVIRONMENT}"\
+          writeFile file: 'deployed_release.txt', text: 'the build is deployed and released'
         }
     }
 
