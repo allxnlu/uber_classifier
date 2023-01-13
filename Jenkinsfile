@@ -35,6 +35,6 @@ pipeline {
   environment {
     something = '13'
     RELEASE = '69.420'
-    PATH = "C:\Windows\System32"
+    PATH = 'C:\Windows\System32'
   }
 }
