@@ -25,6 +25,9 @@ pipeline {
     success{
       echo 'luv u like a love song baby.'
       archiveArtifacts 'deployed_release.txt'
+      sh '''
+        ls
+      '''
     }
   }
   environment {
