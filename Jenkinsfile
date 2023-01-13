@@ -24,6 +24,9 @@ pipeline {
   post{
     always{
       echo 'luv u like a love song baby.'
+      success{
+        archiveArtifacts 'deployed_release.txt'
+      } 
     }
   }
   environment {
