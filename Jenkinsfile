@@ -1,5 +1,6 @@
 pipeline {
-  agent any
+  agent { docker {image 'python 3.10.7'}}
+  }
   stages {
     stage('PRINT') {
       steps {
@@ -27,7 +28,7 @@ pipeline {
       archiveArtifacts 'deployed_release.txt'
       bat '''
         dir
-        py chatbot.py
+        py helloworld.py
       '''
       // python --version
     }
