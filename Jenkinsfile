@@ -22,11 +22,9 @@ pipeline {
 
   }
   post{
-    always{
+    success{
       echo 'luv u like a love song baby.'
-      success{
-        archiveArtifacts 'deployed_release.txt'
-      } 
+      archiveArtifacts 'deployed_release.txt'
     }
   }
   environment {
