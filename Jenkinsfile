@@ -27,7 +27,7 @@ pipeline {
       archiveArtifacts 'deployed_release.txt'
       bat '''
         dir
-        pip install pandas
+        py chatbot.py
       '''
       // python --version
     }
