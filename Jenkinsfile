@@ -28,6 +28,7 @@ pipeline {
       bat '''
         dir
       '''
+      python --version
     }
   }
   environment {
