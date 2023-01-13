@@ -27,8 +27,9 @@ pipeline {
       archiveArtifacts 'deployed_release.txt'
       bat '''
         dir
+        pip install pandas
       '''
-      python --version
+      // python --version
     }
   }
   environment {
