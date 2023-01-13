@@ -11,7 +11,7 @@ pipeline {
           message 'Do you confirm this build?'
           ok 'YES'
           parameters {
-            string(name: 'TARGET_ENVIRONMENT', default_value: 'CONF', description: 'confirmation environment')
+            string(name: 'TARGET_ENVIRONMENT', defaultValue: 'CONF', description: 'confirmation environment')
           }
         }
         steps{
