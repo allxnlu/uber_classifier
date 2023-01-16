@@ -11,7 +11,7 @@ pipeline {
         stage('test') {
             steps {
                 sh '''
-                python helloworld.py
+                python chatbot.py
                 '''
             }
         }
