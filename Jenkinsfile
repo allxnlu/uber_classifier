@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                 python --version
-                print("hello world")
+                python print("hello world")
                 '''
             }
         }
