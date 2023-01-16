@@ -2,6 +2,7 @@
 import re
 import string
 import nltk
+nltk.download('punkt')
 import emoji
 import pandas as pd
 import json
@@ -40,7 +41,6 @@ def get_stopwords():
     response = pd.DataFrame(data = json.loads(requests.get(url).text))
     stop = list(response)
     nltk.download('stopwords')
-    nltk.download('punkt')
     stop.extend(stopwords.words('english'))
     return stop
 
