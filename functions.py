@@ -3,6 +3,7 @@ import re
 import string
 import nltk
 nltk.download('punkt')
+nltk.download('wordnet')
 import emoji
 import pandas as pd
 import json
