@@ -124,10 +124,10 @@ intents = [intent_label(label) for label in df.labels]
 df["intent"]= intents
 print(df)
 
-# stopp = get_stopwords()
+stopp = get_stopwords()
 
 df.question = df.question.astype(str).apply(cleaning)
-# df.questions = df.question.apply(remove_stopwords, stop=stopp)
+df.questions = df.question.apply(remove_stopwords, stop=stopp)
 df.question = df.question.astype(str).apply(lemmize)
 X = df.question.astype(str)
 y = df.intent
