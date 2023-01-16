@@ -127,7 +127,7 @@ print(df)
 stopp = get_stopwords()
 
 df.question = df.question.astype(str).apply(cleaning)
-df.questions = df.question.apply(remove_stopwords, stop=stopp)
+# df.questions = df.question.apply(remove_stopwords, stop=stopp)
 df.question = df.question.astype(str).apply(lemmize)
 X = df.question.astype(str)
 y = df.intent
