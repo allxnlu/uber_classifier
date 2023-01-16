@@ -11,7 +11,7 @@ pipeline {
         stage('test') {
             steps {
                 sh '''
-                python print("hello world")
+                python helloworld.py
                 '''
             }
         }
