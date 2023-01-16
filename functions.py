@@ -35,12 +35,14 @@ def remove_stopwords(text, stop=[]):
     return " ".join(text_list)
 
 #collect stopwords
-# def get_stopwords():
-#     url = "https://countwordsfree.com/stopwords/english/json"
-#     response = pd.DataFrame(data = json.loads(requests.get(url).text))
-#     stop = list(response)
-#     stop.extend(stopwords.words('english'))
-#     return stop
+def get_stopwords():
+    url = "https://countwordsfree.com/stopwords/english/json"
+    response = pd.DataFrame(data = json.loads(requests.get(url).text))
+    stop = list(response)
+    nltk.download('stopwords')
+    nltk.download('punkt')
+    stop.extend(stopwords.words('english'))
+    return stop
 
 #stem the data
 def stemmize(sentence):
