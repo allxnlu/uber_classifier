@@ -2,15 +2,16 @@
 import re
 import string
 import nltk
+import emoji
+import pandas as pd
+import json
+import requests
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk.tokenize import word_tokenize
-import pandas as pd
 from sklearn.metrics import accuracy_score, classification_report
 from textblob import TextBlob
-import json
-import requests
 from cleantext import clean
 
 
@@ -61,26 +62,8 @@ def lemmize(sentence):
 
 
 #clean function
-import string
-import emoji
 
 def cleaning(text):
-    # text = re.sub(r'^https?:\/\/.*[\r\n]*', '', text, flags=re.MULTILINE)
-    # text = re.sub(r"http\S+", "", text)
-    # # text = re.sub("@\w+|\d+"," ",text)
-    # text = re.sub("@[A-Za-z0-9_]+", "", text)
-    # text = text.lower()
-    # text = re.sub("  ", " ", text)
-    # text = re.sub('#[^A-Za-z]+', '', text)
-    # # text = re.sub(r'\\n', '', text)
-    # # text = re.sub(r"\\\"" , '', text)
-    # # text = re.sub(r"\\" , '', text)
-    # text = re.sub("\?", '', text)
-    # text = re.sub("\'", '', text)
-    # text = re.sub("\d+", '', text)
-    # text = re.sub("!", '', text)
-    # # text = text.translate(text.maketrans('', '', string.punctuation))
-    # text = clean(text, no_emoji=True)
     text = text.lower()
     text = re.sub("@[A-Za-z0-9_]+", ' ', text)
     text = re.sub("#[A-Za-z0-9_]+", ' ' , text)
