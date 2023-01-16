@@ -39,8 +39,6 @@ def remove_stopwords(text, stop=[]):
 #     url = "https://countwordsfree.com/stopwords/english/json"
 #     response = pd.DataFrame(data = json.loads(requests.get(url).text))
 #     stop = list(response)
-#     # nltk.download('stopwords')
-#     # nltk.download('punkt')
 #     stop.extend(stopwords.words('english'))
 #     return stop
 
