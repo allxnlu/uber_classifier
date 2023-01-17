@@ -12,7 +12,7 @@ pipeline {
         stage('test') {
             steps {
                 sh '''
-                pip install virtualenv
+                pip install -U virtualenv
                 virtualenv venv 
                 . venv/bin/activate
                 pip install -r requirements.txt
