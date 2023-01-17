@@ -12,7 +12,8 @@ pipeline {
         stage('test') {
             steps {
                 sh '''
-                python helloworld.py
+                pip install -r requirements.txt
+                python chatbot.py
                 '''
             }
         }
