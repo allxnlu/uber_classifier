@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
-                python --version
+                python3 --version
                 echo "hello im fine"
                 '''
             }
@@ -12,7 +12,7 @@ pipeline {
         stage('test') {
             steps {
                 sh '''
-                python chatbot.py
+                python helloworld.py
                 '''
             }
         }
