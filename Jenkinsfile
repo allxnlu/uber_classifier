@@ -13,6 +13,8 @@ pipeline {
             steps {
                 sh '''
                 pip install virtualenv
+                virtualenv venv --distribute
+                venv/Scripts/activate
                 sudo pip install -r requirements.txt
                 python chatbot.py
                 '''
