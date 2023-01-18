@@ -3,18 +3,18 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh '''
-                python3 --version
+                bat '''
+                python --version
                 echo "hello im fine"
                 '''
             }
         }
         stage('test') {
             steps {
-                sh '''
-                pip install -U virtualenv
+                bat '''
+                pip install virtualenv
                 virtualenv venv 
-                . venv/bin/activate
+                venv\Scripts\activate
                 pip install -r requirements.txt
                 python chatbot.py
                 '''
