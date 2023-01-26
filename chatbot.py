@@ -145,6 +145,6 @@ X_train.shape
 
 runSVM(X_train, X_test, y_train, y_test)
 runCalibratedSVM(X_train, X_test, y_train, y_test)
-# runRandomForest(X_train, X_test, y_train, y_test)
-# runMLP(X_train, X_test, y_train, y_test)
-# runLogisticRegression(X_train, X_test, y_train, y_test)
+runRandomForest(X_train, X_test, y_train, y_test)
+runMLP(X_train, X_test, y_train, y_test)
+runLogisticRegression(X_train, X_test, y_train, y_test)
