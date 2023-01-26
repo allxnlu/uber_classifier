@@ -17,6 +17,7 @@ pipeline {
                 bat '''
                 pip install -r requirements.txt
                 python chatbot.py
+                pip show flask
                 '''
             }
         }
